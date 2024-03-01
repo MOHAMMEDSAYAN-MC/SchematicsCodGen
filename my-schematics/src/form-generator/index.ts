@@ -4,10 +4,9 @@ import {
   Tree,
   SchematicsException,
 } from '@angular-devkit/schematics';
-import { Schema } from './schema';
 import { execSync } from 'child_process';
 
-export function formGenerator(options: Schema): Rule {
+export function formGenerator(options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     const data = fetchDataFromBackend();
     debugger
